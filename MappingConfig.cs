@@ -1,17 +1,22 @@
 ﻿using AutoMapper;
-using DesignArch.Entities;
-using DesignArch.Entities.Dto;
+using Ecomm_demo.Entities;
 
-namespace DesignArch
+namespace Ecomm_demo
 {
     public class MappingProfile : Profile
     {
         public MappingProfile()
         {
-            CreateMap<User, UserOrderDto>().ReverseMap();
+            CreateMap<Customer, CustomerDto>().ReverseMap();
+            CreateMap<CreateCustomerDto, Customer>().ReverseMap();
             CreateMap<Order, OrderDto>().ReverseMap();
+            CreateMap<CreateOrderDto, Order>().ReverseMap();
             CreateMap<Product, ProductDto>().ReverseMap();
-            CreateMap<Product, CreateProductDto>().ReverseMap();
+            CreateMap<CreateProductDto, Product>().ReverseMap();
+            CreateMap<OrderItem, OrderItemDto>().ReverseMap();
+            CreateMap<CreateOrderItemDto, OrderItem>().ReverseMap();
+            CreateMap<Category, CategoryDto>().ReverseMap();
+            CreateMap<CreateCategoryDto, Category>().ReverseMap();
         }
     }
 }
